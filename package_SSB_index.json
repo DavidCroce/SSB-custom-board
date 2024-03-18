@@ -12,7 +12,7 @@
           "version": "1.7.14",
           "category": "Contributed",
           "url": "https://github.com/DavidCroce/SSB-custom-board/blob/main/SSB_custom_board.zip",
-          "archiveFileName": "customboard.zip",
+          "archiveFileName": "SSB_custom_board.zip",
           "checksum": "SHA-256:94d9052ad64b071d3346d8e62ba76141a4c9c1eb32ba32ba6495248c059f7ba6",
           "size": "1771434",
           "boards": [
