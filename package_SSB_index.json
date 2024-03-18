@@ -13,8 +13,8 @@
           "category": "Contributed",
           "url": "https://github.com/DavidCroce/SSB-custom-board/blob/main/SSB_custom_board.zip?raw=true",
           "archiveFileName": "SSB_custom_board.zip",
-          "checksum": "SHA-256:9d9676516c59a22d6bb92894afce2bf8157b357406d65db5f3d9fc4aec89d404",
-          "size": "1781832",
+          "checksum": "SHA-256:e4a0484cf11555f59e845e2df7b7c65d119e525ced709665f69e4538a556c1c1",
+          "size": "1781852",
           "boards": [
             {
               "name": "SSB Custom MCU"
