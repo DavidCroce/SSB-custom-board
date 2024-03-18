@@ -2,6 +2,14 @@
 # -----------------------------------
 # SSB Custom board (SAME51)
 # -----------------------------------
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
 SSB_custom_board.name=SSB CUSTOM BOARD (SAME51)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
