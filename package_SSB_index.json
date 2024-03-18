@@ -3,7 +3,7 @@
   [
     {
       "name": "SSB Custom MCU",
-      "maintainer": "John Taylor",
+      "maintainer": "David Croce",
       "platforms":
       [
         {
