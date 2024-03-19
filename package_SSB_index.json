@@ -45,7 +45,7 @@
             {
               "packager": "adafruit",
               "name": "CMSIS",
-              "version": "2.50700.210515"
+              "version": "5.7.0"
             },
             {
               "packager": "adafruit",
