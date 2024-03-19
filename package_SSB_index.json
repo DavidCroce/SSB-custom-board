@@ -48,7 +48,7 @@
               "version": "5.7.0"
             },
             {
-              "packager": "adafruit",
+              "packager": "arduino",
               "name": "CMSIS-Atmel",
               "version": "1.2.0"
             },
