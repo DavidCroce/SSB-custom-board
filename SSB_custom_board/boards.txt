@@ -10,7 +10,7 @@ menu.maxqspi=Max QSPI
 menu.usbstack=USB Stack
 menu.debug=Debug
 
-SSB_custom_board.name=SSB CUSTOM BOARD (SAME51)
+SSB_custom_board.name=SSB_custom_MCU
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 SSB_custom_board.vid.0=0x239A
