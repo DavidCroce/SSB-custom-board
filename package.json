@@ -1,13 +1,68 @@
 {
-  "name": "framework-arduino-samd",
-  "version": "1.0.0",
-  "description": "Custom Arduino framework for SSB board",
-  "keywords": ["framework", "arduino", "samd"],
-  "homepage": "https://github.com/DavidCroce/SSB-custom-board",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DavidCroce/SSB-custom-board.git"
-  },
-  "platforms": ["atmelsam"],
-  "boards": "boards"
+  "packages":
+  [
+    {
+      "name": "SSB Custom MCU",
+      "maintainer": "David Croce",
+      "platforms":
+      [
+        {
+          "name": "Swiss Solar Boat Custom MCUs",
+          "architecture": "samd",
+          "version": "2.2.1",
+          "category": "Contributed",
+          "url": "https://github.com/DavidCroce/SSB-custom-board/tree/main/SSB_custom_board.zip?raw=true",
+          "archiveFileName": "SSB_custom_board.zip",
+          "checksum": "SHA-256:b55abbb99a668006861eecf86d8f7e0638d84922ca02ac478266951fea834aac",
+          "size": "1804484",
+          "boards": [
+            {
+              "name": "SSB Custom MCU"
+            }
+          ],
+          "toolsDependencies":
+          [
+            {
+              "packager": "adafruit",
+              "name": "arm-none-eabi-gcc",
+              "version": "9-2019q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "adafruit",
+              "name": "bossac",
+              "version": "1.8.0-48-gb176eee"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS",
+              "version": "5.4.0"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.2"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
+        }
+      ],
+      "tools":
+      [
+      ]
+    }
+  ]
 }
