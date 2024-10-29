@@ -22,7 +22,7 @@
   },
   "frameworks": {
     "arduino": {
-      "package": "framework-arduino-sam",
+      "package": "SSB-custom-board",
       "script": "builder/frameworks/arduino.py"
     }
   },
@@ -32,7 +32,7 @@
       "owner": "platformio",
       "version": "~1.70201.0"
     },
-    "framework-arduino-sam": {
+    "SSB-custom-board": {
       "type": "framework",
       "owner": "platformio",
       "version": "~1.6.12"
