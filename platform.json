@@ -20,6 +20,12 @@
   "engines": {
     "platformio": "^6"
   },
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduino-sam",
+      "script": "builder/frameworks/arduino.py"
+    }
+  },
   "packages": {
     "toolchain-gccarmnoneeabi": {
       "type": "toolchain",
