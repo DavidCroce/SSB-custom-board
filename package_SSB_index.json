@@ -2,12 +2,12 @@
   "packages":
   [
     {
-      "name": "SSB Custom MCU",
+      "name": "SSB_custom_MCU",
       "maintainer": "David Croce",
       "platforms":
       [
         {
-          "name": "Swiss Solar Boat Custom Board",
+          "name": "SSB_custom_MCU",
           "architecture": "samd",
           "version": "1.7.14",
           "category": "Contributed",
@@ -17,7 +17,7 @@
           "size": "1804484",
           "boards": [
             {
-              "name": "SSB Custom MCU"
+              "name": "SSB_custom_MCU"
             }
           ],
           "toolsDependencies":
