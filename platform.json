@@ -15,12 +15,11 @@
             "board_fqbn": "ssb:ssb_custom_mcu:ssb_custom_mcu",
             "build": {
                 "flags": [
-                    "-D USE_SPECIAL_FEATURE",
-                    "-Os"
+                    "-D YOUR_FLAG"
                 ]
             },
             "variants": [
-                "default"
+                "default"  // Make sure this matches a folder in your 'variants' directory
             ]
         }
     ],
@@ -28,7 +27,7 @@
         "ssb_custom_mcu": {
             "build": {
                 "core": "arduino",
-                "variant": "default"
+                "variant": "default"  // Make sure this matches your variant
             },
             "frameworks": [
                 "arduino"
