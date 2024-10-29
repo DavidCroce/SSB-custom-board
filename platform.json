@@ -2,16 +2,6 @@
   "name": "SSB",
   "title": "SSB Custom Platform",
   "description": "Custom platform configuration for SSB project based on Atmel SAM architecture.",
-  "homepage": "https://github.com/DavidCroce/SSB-custom-board",
-  "license": "Apache-2.0",
-  "keywords": [
-    "dev-platform",
-    "ARM",
-    "Cortex-M",
-    "Atmel",
-    "Microchip",
-    "SAM"
-  ],
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -26,34 +16,12 @@
       "script": "builder/frameworks/arduino.py"
     }
   },
-  "packages": {
-    "toolchain-gccarmnoneeabi": {
-      "type": "toolchain",
-      "owner": "platformio",
-      "version": "~1.70201.0"
-    },
-    "framework-arduino-sam": {
-      "type": "framework",
-      "owner": "platformio",
-      "version": "~1.6.12"
-    }
-  },
   "boards": {
     "ssb_custom_mcu": {
       "build": {
         "core": "arduino",
-        "variant": "ssb_custom_mcu",
-        "extra_flags": [
-          "-Ivariants/ssb_custom_mcu",
-          "-Icores/arduino"
-        ]
-      },
-      "debug": {
-        "openocd_target": "at91samdXX"
-      },
-      "frameworks": [
-        "arduino"
-      ]
+        "variant": "ssb_custom_mcu"
+      }
     }
   }
 }
