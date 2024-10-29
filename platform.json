@@ -22,7 +22,7 @@
   },
   "frameworks": {
     "arduino": {
-      "package": "SSB-custom-board",
+      "package": "framework-arduino-sam",
       "script": "builder/frameworks/arduino.py"
     }
   },
@@ -32,7 +32,7 @@
       "owner": "platformio",
       "version": "~1.70201.0"
     },
-    "SSB-custom-board": {
+    "framework-arduino-sam": {
       "type": "framework",
       "owner": "platformio",
       "version": "~1.6.12"
@@ -43,7 +43,10 @@
       "build": {
         "core": "arduino",
         "variant": "ssb_custom_mcu",
-        "extra_flags": "-Ivariants/ssb_custom_mcu"
+        "extra_flags": [
+          "-Ivariants/ssb_custom_mcu",
+          "-Icores/arduino"
+        ]
       },
       "debug": {
         "openocd_target": "at91samdXX"
