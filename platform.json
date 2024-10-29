@@ -23,7 +23,7 @@
   "version": "8.3.0",
   "frameworks": {
     "arduino": {
-      "package": "SSB-custom-board",
+      "package": "framework-arduino-sam",
       "script": "builder/frameworks/arduino.py"
     },
     "zephyr": {
