@@ -32,7 +32,7 @@ board = env.BoardConfig()
 
 VENDOR_CORE = board.get("build.core", "").lower()
 
-framework_package = "SSB-custom-board"
+framework_package = "framework-arduino-samd"
 if VENDOR_CORE != "arduino":
     framework_package += "-%s" % VENDOR_CORE
 FRAMEWORK_DIR = platform.get_package_dir(framework_package)
