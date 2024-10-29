@@ -1,5 +1,5 @@
 {
-  "name": "framework-arduino-samd-ssb",
+  "name": "SSB-custom-board",
   "version": "1.7.14",
   "description": "Arduino Wiring-based Framework for Microchip SAM D microcontrollers (Adafruit SAMD Core)",
   "keywords": [
