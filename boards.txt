@@ -1,0 +1,90 @@
+
+# -----------------------------------
+# SSB Custom board (SAME51)
+# -----------------------------------
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+SSB_custom_board.name=ssb_custom_mcu
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+SSB_custom_board.vid.0=0x239A
+SSB_custom_board.pid.0=0x80CD
+SSB_custom_board.vid.1=0x239A
+SSB_custom_board.pid.1=0x00CD
+
+# Upload
+SSB_custom_board.upload.tool=bossac18
+SSB_custom_board.upload.protocol=sam-ba
+SSB_custom_board.upload.maximum_size=507904
+SSB_custom_board.upload.offset=0x4000
+SSB_custom_board.upload.use_1200bps_touch=true
+SSB_custom_board.upload.wait_for_upload_port=true
+SSB_custom_board.upload.native_usb=true
+
+# Build
+SSB_custom_board.build.mcu=cortex-m4
+SSB_custom_board.build.f_cpu=120000000L
+SSB_custom_board.build.usb_product="SSB custom board"
+SSB_custom_board.build.usb_manufacturer="David le BOSS"
+SSB_custom_board.build.board=SSB_custom_board
+SSB_custom_board.build.core=arduino
+SSB_custom_board.build.extra_flags=-D__SAME51J19A__ -DADAFRUIT_FEATHER_M4_EXPRESS -DSSB_custom_board -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
+SSB_custom_board.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+SSB_custom_board.build.openocdscript=scripts/openocd/daplink_samd51.cfg
+SSB_custom_board.build.variant=ssb_custom_mcu
+SSB_custom_board.build.variant_system_lib=
+SSB_custom_board.build.vid=0x239A
+SSB_custom_board.build.pid=0x80CD
+SSB_custom_board.bootloader.tool=openocd
+SSB_custom_board.bootloader.file=featherM4/bootloader-feather_m4_express-v2.0.0-adafruit.5.bin
+SSB_custom_board.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
+# Menu: Cache
+SSB_custom_board.menu.cache.on=Enabled
+SSB_custom_board.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+SSB_custom_board.menu.cache.off=Disabled
+SSB_custom_board.menu.cache.off.build.cache_flags=
+
+# Menu: Speed
+SSB_custom_board.menu.speed.120=120 MHz (standard)
+SSB_custom_board.menu.speed.120.build.f_cpu=120000000L
+SSB_custom_board.menu.speed.150=150 MHz (overclock)
+SSB_custom_board.menu.speed.150.build.f_cpu=150000000L
+SSB_custom_board.menu.speed.180=180 MHz (overclock)
+SSB_custom_board.menu.speed.180.build.f_cpu=180000000L
+SSB_custom_board.menu.speed.200=200 MHz (overclock)
+SSB_custom_board.menu.speed.200.build.f_cpu=200000000L
+
+# Menu: Optimization
+SSB_custom_board.menu.opt.small=Small (-Os) (standard)
+SSB_custom_board.menu.opt.small.build.flags.optimize=-Os
+SSB_custom_board.menu.opt.fast=Fast (-O2)
+SSB_custom_board.menu.opt.fast.build.flags.optimize=-O2
+SSB_custom_board.menu.opt.faster=Faster (-O3)
+SSB_custom_board.menu.opt.faster.build.flags.optimize=-O3
+SSB_custom_board.menu.opt.fastest=Fastest (-Ofast)
+SSB_custom_board.menu.opt.fastest.build.flags.optimize=-Ofast
+SSB_custom_board.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+SSB_custom_board.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+
+# Menu: QSPI Speed
+SSB_custom_board.menu.maxqspi.50=50 MHz (standard)
+SSB_custom_board.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+SSB_custom_board.menu.maxqspi.fcpu=CPU Speed / 2
+SSB_custom_board.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+
+# Menu: USB Stack
+SSB_custom_board.menu.usbstack.arduino=Arduino
+SSB_custom_board.menu.usbstack.tinyusb=TinyUSB
+SSB_custom_board.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+
+# Menu: Debug
+SSB_custom_board.menu.debug.off=Off
+SSB_custom_board.menu.debug.on=On
+SSB_custom_board.menu.debug.on.build.flags.debug=-g
