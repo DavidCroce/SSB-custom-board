@@ -10,7 +10,7 @@ menu.maxqspi=Max QSPI
 menu.usbstack=USB Stack
 menu.debug=Debug
 
-SSB_custom_board.name=SSB_custom_MCU
+SSB_custom_board.name=ssb_custom_mcu
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 SSB_custom_board.vid.0=0x239A
@@ -37,7 +37,7 @@ SSB_custom_board.build.core=arduino
 SSB_custom_board.build.extra_flags=-D__SAME51J19A__ -DADAFRUIT_FEATHER_M4_EXPRESS -DSSB_custom_board -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
 SSB_custom_board.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 SSB_custom_board.build.openocdscript=scripts/openocd/daplink_samd51.cfg
-SSB_custom_board.build.variant=SSB_custom_MCU
+SSB_custom_board.build.variant=ssb_custom_mcu
 SSB_custom_board.build.variant_system_lib=
 SSB_custom_board.build.vid=0x239A
 SSB_custom_board.build.pid=0x80CD
