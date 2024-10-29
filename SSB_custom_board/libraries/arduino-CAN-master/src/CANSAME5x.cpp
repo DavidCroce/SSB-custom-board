@@ -180,6 +180,11 @@ CANSAME5x::CANSAME5x() : _tx(-1) {}
 CANSAME5x::~CANSAME5x() {}
 
 int CANSAME5x::begin(long baudrate) {
+
+  hw->CCCR.bit.CCE = 1;
+  hw->CCCR.bit.CCE = 0;
+  hw->CCCR.bit.INIT = 0;
+  
   if (_tx == -1) {
     return 0;
   }
